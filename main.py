@@ -7,15 +7,20 @@ print('Режем число на части')
 
 num = int(input('Введите число: '))
 
+num_reverse = ''
+
 DIGIT_LAST = 10
 divider = 1
 
 digit = num // divider % DIGIT_LAST
 
 while digit != 0:
+    num_reverse += str(digit)
     divider *= 10
     print(digit)
     digit = num // divider % DIGIT_LAST
+
+print(num_reverse)
 
 # a = num // 1000
 # b = num // 100 % 10
